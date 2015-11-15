@@ -43,7 +43,7 @@ Then type (quit) to exit SBCL. Now we are ready to compile our code. Type on the
 
 ###   --dendron-as TYPE 
 
-When a dendron is found in the pattern file, use TYPE for comparison. TYPE might be one of the following values: 'set', 'graph' or 'both'. If the value of TYPE is 'set', then dendrons are treated as sets. If TYPE is 'graph', then they are treated as graphs (compare as drawings). If TYPE is 'both' (default), then supports are calculated both as sets and as graphs.
+When a dendron is found in the pattern file, use TYPE for comparison. TYPE might be one of the following values: `set`, `graph` or `both`. If the value of TYPE is `set`, then dendrons are treated as sets. If TYPE is `graph`, then they are treated as graphs (compare as drawings). If TYPE is `both` (default), then supports are calculated both as sets and as graphs.
 
 ###  --help
  
@@ -55,14 +55,14 @@ Recursively support subdendrons of each dendron in FILE. Useful for supporting a
 
 ###--method METHOD
 
-METHOD may be one of: 'crispy', calculate patterns supports using the crispy comparison, 'relaxed', calculate pattern supports using a fuzzy measure or 'all', calculate pattern supports using all measures (default).
+METHOD may be one of: `crispy`, calculate patterns supports using the crispy comparison, `relaxed`, calculate pattern supports using a fuzzy measure or `all`, calculate pattern supports using all measures (default).
 
 ### --output OUTPUT
 
 OUTPUT is the name of the output file. It stores all input patterns (see --paterns) and their corresponding support in a table. Fields are separated by a TAB character.
 
 ###   --patterns FILE
-Patterns are read from file FILE, one per line. Patterns might be of the type `set' or `dendron'. Sets are lists of elements separated by spaces and enclosed by `(' and `)'. Dendrons are newick formated dendrograms or branches (see examples). Elements should not have any of the following characters: SPACE, TAB, LINEFEED, CARRIAGE_RETURN, COLON, COMMA, SEMICOLON, APOSTROPHE and DOUBLE_QUOTES.
+Patterns are read from file FILE, one per line. Patterns might be of the type `set` or `dendron`. Sets are lists of elements separated by spaces and enclosed by `(` and `)`. Dendrons are newick formated dendrograms or branches (see examples). Elements should not have any of the following characters: SPACE, TAB, LINEFEED, CARRIAGE_RETURN, COLON, COMMA, SEMICOLON, APOSTROPHE and DOUBLE_QUOTES.
                              
 ###   --replicas REP_FILE
 Read REP_FILE to load dendrograms where to support patterns. One dendrogram per line in newick format. 
