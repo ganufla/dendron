@@ -35,7 +35,7 @@ After that, we need to install the library [CFFI](https://common-lisp.net/projec
 
 Then type (quit) to exit SBCL. Now we are ready to compile our code. Type on the bash terminal:
 
-> buildapp --load 
+> buildapp --load app.lisp --output dendron --entry dendron:support-patterns-from-file
 
 ## Usage:      
 
