@@ -11,13 +11,7 @@ A simple tool for calculating statistical supports of patterns within dendrogram
 
 ###   --dendron-as TYPE 
 
->   When a dendron is found in the pattern file, use TYPE
-                             for comparison. TYPE might be one of the following values:
-                             'set', 'graph' or 'both'. If the value of TYPE is 'set',
-                             then dendrons are treated as sets. If TYPE is 'graph', then
-                             they are treated as graphs (compare as drawings). If TYPE
-                             is 'both' (default), then supports are calculated both as sets
-                             and as graphs.
+When a dendron is found in the pattern file, use TYPE for comparison. TYPE might be one of the following values: 'set', 'graph' or 'both'. If the value of TYPE is 'set', then dendrons are treated as sets. If TYPE is 'graph', then they are treated as graphs (compare as drawings). If TYPE is 'both' (default), then supports are calculated both as sets and as graphs.
 
 ###  --help
  
