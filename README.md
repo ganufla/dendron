@@ -1,13 +1,45 @@
 # dendron
 A simple tool for calculating statistical supports of patterns within dendrograms. Such calculation is performed using input patterns, stored in a file, and a set of dendrograms (replicas), stored in other file using newick format. dendron's output is a table having input patterns and their supports. Input patterns may be sets, dendrograms or branches (dendrons). Such patterns are compared with those ones coming from the set of replicas using two methods: crispy or fuzzy. Using 'crispy' method dendron search for exact matches of the given patterns throughout the replicas. When fuzzy method is selected, then a fuzzy measure of similarity is used for finding the most similar subpattern of each replica.
 
-## Install
+## Installation
+
+Dendron is written in Common Lisp and source code needs to be compiled into an executable image file. The first thing we have to do is to install a Lisp interpreter. Dendron run nicely on [SBCL](http://www.sbcl.org). In a Debian system, SBCL is installed typing on a shell terminal:
+
+> sudo apt-get install sbcl
+
+If sbcl is properly installed, you can launch it writing `sbcl` on the terminal
+
+> sbcl
+
+Type (quit or CTRL-d) for quitting. 
+
+Now, we need to install `buildapp`, which help us to make the executable file.
+
+> sudo apt-get install buildapp
+
+Next thing to do is to install the library manager for Lisp [quicklisp](http://www.beta.quicklisp.org), by getting the file:
+[http://beta.quicklisp.org/quicklisp.lisp](http://beta.quicklisp.org/quicklisp.lisp). Then you should type:
+
+> sbcl --load quicklisp.lisp
+
+Once you are in SBCL, type:
+> *(quicklisp-quickstart:install)
+
+and then:
+
+> *(ql:add-to-init-file)
+
+After that, we need to install the library [CFFI](https://common-lisp.net/project/cffi/) by typing in the sbcl REPL:
+
+> *(ql:quickload "cffi")
+
+Then type (quit) to exit SBCL. Now we are ready to compile our code. Type on the bash terminal:
+
+> buildapp --load 
 
 ## Usage:      
 
-> dendron --patterns FILE --replicas REP_FILE [--output PREFIX] [--method METHOD] [--include-subdendrons]
-
-> [--dendrons-as TYPE]
+> dendron --patterns FILE --replicas REP_FILE --output PREFIX --method METHOD --include-subdendrons --dendrons-as TYPE
 
 ###   --dendron-as TYPE 
 
@@ -41,5 +73,5 @@ Read REP_FILE to load dendrograms where to support patterns. One dendrogram per 
 To calculate supports of patterns in example.tre using a crispy set comparison whith dendrograms from the file rep.tre.
 
 > dendron --replicas rep.tre --patterns example2.tre --output example2-out --method all --include-subdendrons
-  
-  To calculate supports of patterns in the file example.tre, including their branches and using all methods.
+
+To calculate supports of patterns in the file example.tre, including their branches and using all methods.
