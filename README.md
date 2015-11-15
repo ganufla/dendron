@@ -55,11 +55,11 @@ is `both` (default), then frequencies are calculated both as sets
 and as graphs.                                                   
 
 
->  --help
+`--help`
  
  Display this help.
 
->   --include-subdendrons
+`--include-subdendrons`
 
 Recursively calculate frequency of subdendrons of each dendron     
 in FILE. Useful for calculating the frequency of a whole dendrogram
@@ -67,7 +67,7 @@ and all its branches.
 Might be time consuming for large dendrograms, especially using    
 graph comparison.                                                  
 
-> --method METHOD
+`--method METHOD`
 
 METHOD may be one of:                           
 `crispy`, calculate frequency of patterns       
@@ -79,14 +79,14 @@ METHOD may be one of:
 `all`, calculate frequency of patterns using all
  measures (default).                            
 
-> --output OUTPUT
+`--output OUTPUT`
 
 OUTPUT is the name of the output file. It stores all          
-input patterns (see --paterns) and their corresponding        
+input patterns (see `--paterns`) and their corresponding        
 frequency in a table. Fields are separated by a TAB character.
 
 
->   --patterns FILE
+`--patterns FILE`
 
 Patterns are read from file FILE, one per line.        
 Patterns might be of the type `set` or `dendron`.      
@@ -98,7 +98,7 @@ LINEFEED, CARRIAGE_RETURN, COLON, COMMA, SEMICOLON,
 APOSTROPHE and DOUBLE_QUOTES.                          
 
                              
->   --replicas REP_FILE
+`--replicas REP_FILE`
 Read REP_FILE to load dendrograms where to calculate frequency of patterns.
 One dendrogram per line in newick format.                                  
 
