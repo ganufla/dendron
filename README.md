@@ -47,5 +47,5 @@ Usage:      dendron --patterns FILE --replicas REP_FILE [--output PREFIX] [--met
              To calculate supports of patterns in example.tre using a crispy set comparison whith dendrograms
              from the file rep.tre.
 
-             dendron --replicas rep.tre --patterns example2.tre --output example2-out --method all --include-subdendrons
+dendron --replicas rep.tre --patterns example2.tre --output example2-out --method all --include-subdendrons
              To calculate supports of patterns in the file example.tre, including their branches and using all methods.
