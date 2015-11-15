@@ -3,7 +3,8 @@ A simple tool for calculating statistical supports of patterns within dendrogram
 
 Usage:      dendron --patterns FILE --replicas REP_FILE [--output PREFIX] [--method METHOD] [--include-subdendrons] [--dendrons-as TYPE]
 
-   --dendron-as TYPE         When a dendron is found in the pattern file, use TYPE
+   --dendron-as TYPE 
+   When a dendron is found in the pattern file, use TYPE
                              for comparison. TYPE might be one of the following values:
                              'set', 'graph' or 'both'. If the value of TYPE is 'set',
                              then dendrons are treated as sets. If TYPE is 'graph', then
@@ -11,21 +12,19 @@ Usage:      dendron --patterns FILE --replicas REP_FILE [--output PREFIX] [--met
                              is 'both' (default), then supports are calculated both as sets
                              and as graphs.
 
-   --help                    Display this text.
+   --help
+   Display this text.
 
-   --include-subdendrons     Recursively support subdendrons of each dendron in FILE.
+   --include-subdendrons
+   Recursively support subdendrons of each dendron in FILE.
                              Useful for supporting a whole dendrogram and all its branches.
                              Might be time consuming for large dendrograms, especially using
                              graph comparison.
 
-   --method METHOD           METHOD may be one of:
-                             'crispy', calculate patterns supports
-                              using the crispy comparison.
-
-                             'fuzzy', calculate pattern supports using
-                              a fuzzy measure.
-
-                             'all', calculate pattern supports using all
+   --method METHOD
+   METHOD may be one of: 'crispy', calculate patterns supports
+                              using the crispy comparison, 'fuzzy', calculate pattern supports using
+                              a fuzzy measure or 'all', calculate pattern supports using all
                               measures (default).
 
    --output OUTPUT           OUTPUT is the name of the output file. It stores all
