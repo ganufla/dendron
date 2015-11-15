@@ -42,30 +42,30 @@ Then type (quit) to exit SBCL. Now we are ready to compile our code. Type on the
 
 > dendron --patterns FILE --replicas REP_FILE --output PREFIX --method METHOD --include-subdendrons --dendrons-as TYPE
 
-###   --dendron-as TYPE 
+>   --dendron-as TYPE 
 
 When a dendron is found in the pattern file, use TYPE for comparison. TYPE might be one of the following values: `set`, `graph` or `both`. If the value of TYPE is `set`, then dendrons are treated as sets. If TYPE is `graph`, then they are treated as graphs (compare as drawings). If TYPE is `both` (default), then supports are calculated both as sets and as graphs.
 
-###  --help
+>  --help
  
->   Display this text.
+ Display this help.
 
-###   --include-subdendrons
+>   --include-subdendrons
 
 Recursively support subdendrons of each dendron in FILE. Useful for supporting a whole dendrogram and all its branches. Might be time consuming for large dendrograms, especially using graph comparison.
 
-###--method METHOD
+> --method METHOD
 
 METHOD may be one of: `crispy`, calculate patterns supports using the crispy comparison, `relaxed`, calculate pattern supports using a fuzzy measure or `all`, calculate pattern supports using all measures (default).
 
-### --output OUTPUT
+> --output OUTPUT
 
 OUTPUT is the name of the output file. It stores all input patterns (see --paterns) and their corresponding support in a table. Fields are separated by a TAB character.
 
-###   --patterns FILE
+>   --patterns FILE
 Patterns are read from file FILE, one per line. Patterns might be of the type `set` or `dendron`. Sets are lists of elements separated by spaces and enclosed by `(` and `)`. Dendrons are newick formated dendrograms or branches (see examples). Elements should not have any of the following characters: SPACE, TAB, LINEFEED, CARRIAGE_RETURN, COLON, COMMA, SEMICOLON, APOSTROPHE and DOUBLE_QUOTES.
                              
-###   --replicas REP_FILE
+>   --replicas REP_FILE
 Read REP_FILE to load dendrograms where to support patterns. One dendrogram per line in newick format. 
 
 ## Examples:   
