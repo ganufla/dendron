@@ -13,7 +13,7 @@ If sbcl is properly installed, you can launch it writing `sbcl` on the terminal
 
 > sbcl
 
-Type (quit or CTRL-d) for quitting. 
+Type (quit) or CTRL-d for quitting. 
 
 Now, we need to install `buildapp`, which help us to make the executable file.
 
