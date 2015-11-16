@@ -42,7 +42,7 @@ Then type (quit) to exit SBCL. Now we are ready to compile our code. Type on the
 
 ## Usage:      
 
-> dendron --patterns FILE --replicas REP_FILE --output PREFIX --method METHOD --include-subdendrons --dendrons-as TYPE
+> dendron --patterns FILE --replicas REP_FILE --output PREFIX --method METHOD --include-subdendrons <br/> --dendrons-as TYPE
 
 `--dendron-as TYPE` 
 
