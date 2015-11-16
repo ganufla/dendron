@@ -1,5 +1,5 @@
 # dendron
-a simple tool for calculating frequency of patterns within dendrograms. Such calculation is performed using input patterns, stored in a file, and a set of dendrograms (replicas), stored in other file using newick format. Dendron's output is a table having input patterns and their frequencies.      
+A simple tool for calculating frequency of patterns within dendrograms. Such calculation is performed using input patterns, stored in a file, and a set of dendrograms (replicas), stored in other file using newick format. Dendron's output is a table having input patterns and their frequencies.      
 
 Input patterns may be sets, dendrograms or branches (dendrons). Such patterns are compared with those ones coming from the set of replicas using two methods: crispy and relaxed. Using 'crispy' method dendron search for exact matches of the given patterns throughout the replicas. When relaxed method is selected, then a relaxed measure of similarity is used for finding the most similar subpattern within each replica.
 
