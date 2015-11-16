@@ -40,10 +40,11 @@ Then type (quit) to exit SBCL. Now we are ready to compile our code. Type on the
 > buildapp --load app.lisp --output dendron --entry dendron:support-patterns-from-file
 
 
-## Usage:      
+## Usage     
 
 > dendron --patterns FILE --replicas REP_FILE --output PREFIX --method METHOD --include-subdendrons <br/> --dendrons-as TYPE
 
+### Options
 `--dendron-as TYPE` 
 
 When a dendron is found in the pattern file, use TYPE for comparison. TYPE might be one of the following values: `set`, `graph` or `both`. If the value of TYPE is `set`, then dendrons are treated as sets. If TYPE is `graph`, then they are treated as graphs (compare as drawings). If TYPE is `both` (default), then frequencies are calculated both as sets and as graphs.                                                   
