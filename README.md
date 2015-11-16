@@ -19,7 +19,7 @@ Now, we need to install `buildapp`, which help us to make the executable file.
 
 > sudo apt-get install buildapp
 
-Next thing to do is to install the library manager for Lisp [quicklisp](http://www.beta.quicklisp.org), by getting the file:
+Next thing to do is to install the library manager for Lisp [quicklisp](http://www.quicklisp.org), by getting the file:
 [http://beta.quicklisp.org/quicklisp.lisp](http://beta.quicklisp.org/quicklisp.lisp). Then you should type:
 
 > sbcl --load quicklisp.lisp
