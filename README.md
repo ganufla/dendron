@@ -1,7 +1,7 @@
 # dendron
-A simple tool for calculating frequency of patterns within dendrograms. Such calculation is performed using input patterns, stored in a file, and a set of dendrograms (replicas), stored in other file using newick format. Dendron's output is a table having input patterns and their frequencies.      
+A simple tool for calculating frequency of clusters within dendrograms. Such a calculation is performed using input patterns, stored in a file, and a set of dendrograms (replicas), stored in other file using newick format. Dendron's output is a table having input patterns and their frequencies.
 
-Input patterns may be sets, dendrograms or branches (dendrons). Such patterns are compared with those ones coming from the set of replicas using two methods: crispy and relaxed. Using 'crispy' method dendron search for exact matches of the given patterns throughout the replicas. When relaxed method is selected, then a relaxed measure of similarity is used for finding the most similar subpattern within each replica.
+Clusters may be sets, dendrograms or branches (dendrons). Such clusters are compared with those ones coming from the set of replicas using two methods: crispy and relaxed. Using 'crispy' method dendron search for exact matches of the given patterns throughout the replicas (set cluster contrast or graph cluster contrast). When relaxed method is selected, then a relaxed measure of similarity is used for finding the most similar subpattern within each replica. For more information regarding the contrast methods, view [Leal W., et al](http://www.jcheminf.com/).
 
 ## Installation
 
@@ -47,7 +47,7 @@ Then type (quit) to exit SBCL. Now we are ready to compile our code. Type on the
 ### Options
 `--dendron-as TYPE` 
 
-When a dendron is found in the pattern file, use TYPE for comparison. TYPE might be one of the following values: `set`, `graph` or `both`. If the value of TYPE is `set`, then dendrons are treated as sets. If TYPE is `graph`, then they are treated as graphs (compare as drawings). If TYPE is `both` (default), then frequencies are calculated both as sets and as graphs.                                                   
+When a dendrogram or a branch is found in the cluster input file, use TYPE for comparison. TYPE might be one of the following values: `set`, `graph` or `both`. If the value of TYPE is `set`, then dendrons are treated as sets. If TYPE is `graph`, then they are treated as graphs (compare as drawings). If TYPE is `both` (default), then frequencies are calculated both as sets and as graphs.                                                   
 
 `--help`
  
@@ -74,7 +74,7 @@ OUTPUT is the name of the output file. It stores all input patterns (see `--pate
 Patterns are read from file FILE, one per line. Patterns might be of the type `set` or `dendron`. Sets are lists of elements separated by spaces and enclosed by `(` and `)`. Dendrons are newick formated dendrograms or branches (see examples). Elements should not have any of the following characters: SPACE, TAB, LINEFEED, CARRIAGE_RETURN, COLON, COMMA, SEMICOLON, APOSTROPHE and DOUBLE_QUOTES.
 
 `--replicas REP_FILE`
-Read REP_FILE to load dendrograms where to calculate frequency of patterns. One dendrogram per line in newick format.                                  
+Read REP_FILE to load dendrograms to search for clusters. One dendrogram per line in newick format.           
 
 ## Examples:   
 > dendron --patterns example.tre --output example-output --method crispy-set --replicas rep.tre
