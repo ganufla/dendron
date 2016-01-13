@@ -74,6 +74,7 @@ OUTPUT is the name of the output file. It stores all input patterns (see `--pate
 Patterns are read from file FILE, one per line. Patterns might be of the type `set` or `dendron`. Sets are lists of elements separated by spaces and enclosed by `(` and `)`. Dendrons are newick formated dendrograms or branches (see examples). Elements should not have any of the following characters: SPACE, TAB, LINEFEED, CARRIAGE_RETURN, COLON, COMMA, SEMICOLON, APOSTROPHE and DOUBLE_QUOTES.
 
 `--replicas REP_FILE`
+
 Read REP_FILE to load dendrograms to search for clusters. One dendrogram per line in newick format.           
 
 ## Examples:   
